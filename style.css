@@ -1,0 +1,135 @@
+body {
+    background-color: #111111;
+    color: white;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 40px 0px;
+}
+
+.container{
+    padding: 20px 40px;
+}
+
+/* Inicio buscadores */
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+/* Fin buscadores */
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 40px;
+}
+
+.picture {
+    text-align: center;
+    box-shadow: 0 0 10px #ffffff;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 12px;
+    background-color: #444444;
+}
+
+.picture__img__container {
+    height: 277px;
+}
+
+.picture__img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 10px #000000;
+}
+
+/* Detalle de la foto */
+.picture_detail {
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: calc(100vh);
+    width: calc(100vw - 17px);
+}
+
+.picture_detail::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+.picture_detail__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    max-width: 330px;
+}
+
+.picture_detail__title,
+.picture_detail__explanation,
+.picture_detail__date,
+.picture_detail__copyright,
+.picture_detail__img {
+    position: relative;
+    z-index: 9;
+}
+
+.picture_detail__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.picture_detail__info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.8;
+    z-index: 9;
+}
+
+/* Menu hamburguesa */
+#menu__hamburguesa {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 32px;
+    height: 18px;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    z-index: 99999;
+}
+
+#menu__hamburguesa .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+#menu__hamburguesa .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-11px, 0px);
+}
+
+#menu__hamburguesa .line:nth-child(2) {
+    transform: rotate(45deg) translate(-11px, 0px);
+}
